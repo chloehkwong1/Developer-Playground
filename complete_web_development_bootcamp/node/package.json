@@ -1,0 +1,15 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Intro to node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Chloe Wong",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.0.0"
+  }
+}
