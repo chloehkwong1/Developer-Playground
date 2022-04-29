@@ -9,3 +9,5 @@ A playground to learn all things developing!
 
 [Calculator App with Express (First Web App)](https://github.com/chloehkwong1/Developer-Playground/blob/main/complete_web_development_bootcamp/calculator_express_node/notes.md)
 
+[Real DOM vs Virtual DOM](https://github.com/chloehkwong1/Developer-Playground/blob/main/complete_web_development_bootcamp/DOM%20Challenge%20Starting%20Files/notes.md)
+
