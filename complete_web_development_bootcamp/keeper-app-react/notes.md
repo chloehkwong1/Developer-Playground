@@ -131,3 +131,11 @@ import subtract, { add, multiply } from "./calculator"
 `<script>` tags allow you to put javascript in html.
 
 Parentheses on the end of functions denotes calling the function.
+
+### CSS
+
+```
+#foo {} // will style the single element declared with an attribute id="foo"
+.foo {} // will style all elements with an attribute class="foo"
+header {} // will style the html element called header
+```
