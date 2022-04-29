@@ -126,6 +126,9 @@ export {add, multiply}
 import subtract, { add, multiply } from "./calculator"
 ```
 
+## Components and props
+Styling (e.g. `className`) always has to go inside the pre-determined HTML elements rather than in the props of a component. If you put it into the props, it will think it is a custom property. 
+
 ## Unrelated but useful to know
 
 `<script>` tags allow you to put javascript in html.
