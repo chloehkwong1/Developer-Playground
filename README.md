@@ -11,3 +11,5 @@ A playground to learn all things developing!
 
 [Real DOM vs Virtual DOM](https://github.com/chloehkwong1/Developer-Playground/blob/main/complete_web_development_bootcamp/DOM%20Challenge%20Starting%20Files/notes.md)
 
+[React](https://github.com/chloehkwong1/Developer-Playground/blob/main/complete_web_development_bootcamp/keeper-app-react/notes.md)
+
