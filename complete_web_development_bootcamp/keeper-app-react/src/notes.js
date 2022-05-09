@@ -23,4 +23,7 @@ const notes = [
     content:
       "What's the difference between hardware and software? You can hit your hardware with a hammer, but you can only curse at your software.",
   },
+  {key: 5, title: "Dear Evan Hansen", content: "But he kept it all inside his head. What he saw, he left unsaid." }
 ];
+
+export default notes;
