@@ -127,7 +127,88 @@ import subtract, { add, multiply } from "./calculator"
 ```
 
 ## Components and props
-Styling (e.g. `className`) always has to go inside the pre-determined HTML elements rather than in the props of a component. If you put it into the props, it will think it is a custom property. 
+
+Styling (e.g. `className`) always has to go inside the pre-determined HTML elements rather than in the props of a component. If you put it into the props, it will think it is a custom property.
+
+## Functional programming
+
+Instead of passing values around, you pass functions (lots of levels of functions).
+
+## Mapping
+
+Must pass a function to a map.
+
+### Unique key error
+
+`Warning: Each child in a list should have a unique "key" prop`
+
+When creating a list in the UI from an array with JSX, you should add a key prop to each child and to any of its’ children.
+
+Ex: `<li key="uniqueId1" >Item1</li>`
+
+React uses the key prop create a relationship between the component and the DOM element. The library uses this relationship to determine whether or not the component should be re-rendered.
+
+It is not recommended to use the index of the array as the key prop if you know the array will not be static. If the key is an index, reordering an item in the array changes it. Then React will get confused and re-render the incorrect element.
+
+Keys do not have to be unique globally. They just need to be unique across sibling elements.
+
+Keys can be strings or numbers.
+
+`key` is a special prop. It cannot be accessed as a prop. If it is needed, you should pass it as a different prop with the same value.
+
+## Map/Filter/Reduce
+
+- Map -Create a new array by doing something with each item in an array.
+
+```
+ function double(x) {
+   return x * 2;
+ }
+
+ const newNumbers = numbers.map(double);
+```
+
+- Filter - Create a new array by keeping the items that return true.
+
+```
+ const newNumbers = numbers.filter(function(num) {
+   return num < 10;
+ });
+```
+
+- Reduce - Accumulate a value by doing something to each item in an array.
+
+```
+ var newNumber = numbers.reduce(function (accumulator, currentNumber) {
+     return accumulator + currentNumber;
+ })
+```
+
+- Find - find the first item that matches from an array.
+
+```
+ const newNumber = numbers.find(function (num) {
+   return num > 10;
+ })
+```
+
+- FindIndex - find the index of the first item that matches.
+
+```
+ const newNumber = numbers.findIndex(function (num) {
+   return num > 10;
+ })
+```
+
+### Differences Between the map and forEach Methods
+
+The main difference between map and forEach is that the map method returns a new array by applying the callback function on each element of an array, while the forEach method doesn’t return anything.
+
+You can use the forEach method to mutate the source array, but this isn't really the way it's meant to be used. Instead, it's great for when you need to do some action with each element of the array.
+
+On the other hand, the map method is used for creating a new array, and thus, it’s chainable. You can call a number of map operations one after the other.
+
+The forEach method doesn’t return anything, so you can’t chain it with any other methods—it’s not chainable.
 
 ## Unrelated but useful to know
 
@@ -142,3 +223,20 @@ Parentheses on the end of functions denotes calling the function.
 .foo {} // will style all elements with an attribute class="foo"
 header {} // will style the html element called header
 ```
+
+### Operating System stuff
+
+- Unix - is an operating system. Unix was and is (mostly) proprietary.
+
+- Linux (aka Unix clone) - is a Unix-like computer operating system assembled under the model of free and open source software development and distribution. The defining component of Linux is the Linux kernel, an operating system kernel first released 5 October 1991 by Linus Torvalds.
+
+- Ubuntu (flavour of Linux) - is a computer operating system based on the Debian Linux distribution and distributed as free and open source software, using its own desktop environment. As of 2012, Ubuntu is the most popular Linux distribution on desktop/laptop personal computers, and most Ubuntu coverage focuses on its use in that market.
+
+### CircleCI executor
+
+An executor type defines the underlying technology or environment in which to run a job. CircleCI enables you to run jobs in one of four environments:
+
+Within Docker images (docker)
+Within a Linux virtual machine (VM) image (machine)
+Within a macOS VM image (macos)
+Within a windows VM image (windows)
