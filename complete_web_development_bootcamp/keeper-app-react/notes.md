@@ -39,6 +39,8 @@ INVALID CODE:
 
 - JS statements: computer needs to evaluate and work out something e.g. if, else, while, for -> CANNOT be used in JSX
 
+A ternary operator is an EXPRESSION but an if statement is not. This is because each individual section `CONDITION ? DO IF TRUE : DO IF FALSE` is an expression.
+
 ### Template Literals
 
 Put within backticks.
@@ -209,6 +211,35 @@ You can use the forEach method to mutate the source array, but this isn't really
 On the other hand, the map method is used for creating a new array, and thus, it’s chainable. You can call a number of map operations one after the other.
 
 The forEach method doesn’t return anything, so you can’t chain it with any other methods—it’s not chainable.
+
+## && in React
+
+`CONDITION && EXPRESSION`
+
+If the condition is true, then the expression is evaluated.
+If the condition is false, then the expression is NOT evaluated.
+
+Instead of `CONDITION ? EXPRESSION : null` you can use `CONDITION && EXPRESSION`.
+
+## State
+
+UI = function(state)
+
+### Declarative vs Imperative
+
+A declarative style, like what react has, allows you to control flow and state in your application by saying "It should look like this". An imperative style turns that around and allows you to control your application by saying "This is what you should do".
+
+Good link >> https://stackoverflow.com/questions/33655534/difference-between-declarative-and-imperative-in-react-js
+
+### Hooks
+
+Hooks must be used inside functional components.
+
+## Destructuring
+
+Destructuring arrays is what happens with `useState()`.
+
+Useful link >>> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 ## Unrelated but useful to know
 
