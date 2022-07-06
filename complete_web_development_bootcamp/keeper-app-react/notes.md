@@ -241,6 +241,43 @@ Destructuring arrays is what happens with `useState()`.
 
 Useful link >>> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
+### Destructing nested objects
+Consider this object, which contains information about a user.
+
+```const user = {
+  id: 42,
+  displayName: 'jdoe',
+  fullName: {
+    firstName: 'John',
+    lastName: 'Doe'
+  }
+};
+```
+The example below shows the property `fullname.firstName` being unpacked into a variable called name.
+```
+function whois({displayName, fullName: {firstName: name}}) {
+  ...
+}
+```
+
+### Destructuring nested arrays
+
+The same can be done for nested arrays. Recall, in destructuring arrays you can call the property anything you like but it has to be in the right order. Below, the variable lName will be available to use (equal to lastName). 
+```
+function whois({displayName, fullName: [, lName]})
+```
+
+## Controlled Components
+https://reactjs.org/docs/forms.html#controlled-components
+We need to add the value that comes from our STATE as the value attribute of our input, to keep a single source of truth.
+
+### event.preventDefault()
+Prevents the default next behaviour of the event, which for a form `onSubmit` is refreshing the page. 
+
+### Synthetic Events
+https://reactjs.org/docs/events.html
+
+Tldr , don't use `event.target` inside functions that are setting the state. 
 ## Unrelated but useful to know
 
 `<script>` tags allow you to put javascript in html.
