@@ -1,6 +1,7 @@
 # React / Django App Boilerplate
 
 ## To get running: 
+
 These instructions haven't been tested yet so please tell me if any steps don't work!
 
 1. In the top level of the project repository run `pip install pipenv`
